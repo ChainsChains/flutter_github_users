@@ -6,8 +6,8 @@ import 'package:http/http.dart' as http;
 import 'models/user.dart';
 
 class ServiceRequests {
-  Future<List<User>> getUsers() async {
-    final response = await http.get('https://api.github.com/search/users?&q=rembo');
+  Future<List<User>> getUsers(String query) async {
+    final response = await http.get('https://api.github.com/search/users?&q=$query');
 
     if (response.statusCode == 200) {
       return MyResponse.fromJson(jsonDecode(response.body)).items;
