@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_github_users/api/models/user.dart';
 import 'package:flutter_github_users/app_drawer.dart';
-import 'package:flutter_github_users/viewModels/user_search_model_impl.dart';
+import 'package:flutter_github_users/viewModels/user_search_viewmodel_impl.dart';
 
 
 class UserSearchView extends StatefulWidget {
@@ -14,7 +14,7 @@ class _UserSearchViewState extends State<UserSearchView> {
   Icon _searchActionIcon = Icon(Icons.search);
   Widget _appBarTitle = Text('Git Users');
   TextEditingController _searchController = TextEditingController();
-  UserSearchModelImpl _viewModel = UserSearchModelImpl();
+  UserSearchViewModelImpl _viewModel = UserSearchViewModelImpl();
 
   @override
   Widget build(BuildContext context) {

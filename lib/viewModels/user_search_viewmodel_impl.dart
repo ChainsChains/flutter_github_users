@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter_github_users/api/models/user.dart';
 import 'package:flutter_github_users/repository/gituser_repository.dart';
 import 'package:rxdart/rxdart.dart';
-import 'user_search_model.dart';
+import 'user_search_viewmodel.dart';
 
-class UserSearchModelImpl implements UserSearchModel {
+class UserSearchViewModelImpl implements UserSearchViewModel {
   final _repository = GitUserRepository();
   final _usersFetcher = PublishSubject<List<User>>();
   final _isSearchingFetcher = PublishSubject<bool>();
@@ -15,7 +15,7 @@ class UserSearchModelImpl implements UserSearchModel {
 
   bool _isSearching = false;
 
-  UserSearchModelImpl() {
+  UserSearchViewModelImpl() {
     _queryTextController.stream.listen((query) {
       _repository.searchUsers(query).then((users) {
         _usersFetcher.sink.add(users);

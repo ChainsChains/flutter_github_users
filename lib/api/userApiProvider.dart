@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter_github_users/api/models/myResponse.dart';
+import 'package:flutter_github_users/api/models/my_response.dart';
 import 'package:http/http.dart' as http;
 
 import 'models/user.dart';

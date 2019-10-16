@@ -1,7 +1,7 @@
 import 'package:flutter_github_users/api/models/user.dart';
 import 'package:rxdart/rxdart.dart';
 
-abstract class UserSearchModel {
+abstract class UserSearchViewModel {
   Sink get inputQueryText;
   Sink get inputOnSearchPressed;
 
